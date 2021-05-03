@@ -1,12 +1,140 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-  </body>
+<body class="page__body">
+
+  <header class="page-header">
+    <div class="container">
+      <a class="logo" href="">
+        <img class="logo__img" src="../source/img/pink-text.svg" width="145" height="40" alt="Логотип сайта">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle">
+          <span class="vissualy-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--current">
+            <a>Главная</a>
+          </li>
+          <li class="main-nav__item"><a href="catalog.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+    <h1 class="vissualy-hidden">Pink - мобильное приложение для раскрашивания серых будней в розовый цвет.</h1>
+
+    <section class="download">
+      <div class="container">
+        <h2 class="vissualy-hidden">Скачать приложение</h2>
+        <p class="download__slogan">Взгляните на жизнь иначе!</p>
+        <img class="download__img" src="../source/img/hand-phone.png" width="320" height="286"
+          alt="Телефон в руке, на экране фотография, обработанная с помощью приложения Pink">
+        <a href="https://www.apple.com/ru/app-store/" class="download__link">Скачать приложение</a>
+        <div class="img-os-block">
+          <a href="https://www.apple.com/ru/app-store/">
+            <img src="../source/img/apple-logo.svg" width="47" height="56" alt="Логотип Apple - яблоко">
+          </a>
+          <a href="https://play.google.com/store/apps?hl=ru">
+            <img src="../source/img/android-logo.svg" width="43" height="47" alt="Логотип Android - робот">
+          </a>
+          <a href="https://www.microsoft.com/ru-RU/store/apps">
+            <img src="../source/img/microsoft-logo.svg" width="44" height="41"
+              alt="Логотип Microsoft - квадрат состоящий из четырёх равных квадратов; сверху - красный и зелёный, снизу - голубой и жёлтый">
+          </a>
+          <p class="img-os-block__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 81</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="characteristic">
+      <h2 class="vissualy-hidden">Характеристики Pink</h2>
+      <h3 class="characteristic__title">Устали от серости мегаполиса?</h3>
+      <p class="characteristic__subtitle">Нам есть, что вам предложить!</p>
+      <dl class="characteristic__list">
+        <dt class="characteristic__term">Поднимает настроение</dt>
+        <dd class="characteristic__term-descripition">Приложение позволит вам победить осеннюю хандру и депрессию
+          буквально
+          в несколько кликов!</dd>
+        <dt class="characteristic__term">Меняет мир вокруг</dt>
+        <dd class="characteristic__term-descripition">Сделайте снимок и украсьте его смайликом или текстовой подписью,
+          чтобы
+          усилить эффект</dd>
+        <dt class="characteristic__term">Заводит новых друзей</dt>
+        <dd class="characteristic__term-descripition">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+          заводите новых</dd>
+      </dl>
+    </section>
+
+    <article class="main-article">
+      <h2 class="main-article__title">Эффект на 24 часа!</h2>
+      <p class="main-article__text">Британские ученые провели исследования и доказали, что положительный эффект от
+        использования приложения длится
+        целые сутки!</p>
+      <a class="main-article__link" href="#">Узнать больше об исследовании</a>
+    </article>
+
+    <section class="reviews">
+
+      <ul class="reviews__list">
+        <li class="reviews__item">
+          <q class="reviews__quote">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+            серые вещи! А еще я
+            познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+          <cite class="reviews__cite"><span class="reviews__quote-author">Николай Петров</span> 25 лет, водитель
+            трамвая</cite>
+        </li>
+        <li class="review__list">
+          <q class="review__quote"></q>
+          <cite class="reviews__cite"><span class="reviews__quote-author"></span></cite>
+        </li>
+        <li class="review__list">
+          <q class="review__quote"></q>
+          <cite class="reviews__cite"><span class="reviews__quote-author"></span></cite>
+        </li>
+      </ul>
+
+      <ul class="slider-pager">
+        <li class="slider-pager__item ">
+          <a class="slider-pager__link slider-pager__link--first" href="#" aria-label="Первый экран слайдера"
+            data-screen="slider-item--first"></a>
+        </li>
+        <li class="slider-pager-item">
+          <a class="slider-pager__link slider-pager__link--second slider-pager__link--active" href="#"
+            aria-label="Второй экран слайдера" data-screen="slider__item--second"></a>
+        </li>
+        <li class="slider-pager__item">
+          <a class="slider-pager__link slider-pager__link--third" href="#" aria-label="Третий экран слайдера"
+            data-screen="slider__item--third"></a>
+        </li>
+      </ul>
+
+    </section>
+
+    <section>
+      <table></table>
+    </section>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+</body>
+
 </html>
