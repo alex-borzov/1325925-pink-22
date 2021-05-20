@@ -1,0 +1,32 @@
+.logo {
+  &:hover * .logo__pass {
+    fill: $purpur-red;
+  }
+  &:active * .logo__pass {
+    fill: $white;
+  }
+  &:hover * .logo__pink {
+    fill: $purpur-red;
+  }
+  &:active * .logo__pink {
+    fill: $grey;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet) {
+  .svg .mobile {
+    display: none;
+  }
+  .svg .tablet {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop) {
+  .svg .tablet {
+    display: none;
+  }
+}

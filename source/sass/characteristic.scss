@@ -1,0 +1,171 @@
+.characteristic {
+  padding-top: 40px;
+}
+
+.characteristic__title {
+  width: 280px;
+  margin: 0 auto 30px;
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 300;
+  text-align: center;
+}
+
+.characteristic__subtitle {
+  width: 280px;
+  margin: 0 auto;
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 300;
+  text-align: center;
+}
+
+.characteristic__list {
+  position: relative;
+  margin: 62px 0 0 0;
+  padding: 52px 0 285px;
+  text-align: center;
+  background-color: $skygrey;
+  list-style: none;
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(
+      to top left,
+      $skygrey 50%,
+      rgba(255, 0, 0, 0) 52%
+    );
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 157px;
+    height: 276px;
+    transform: translateX(-50%);
+    background: url("../img/iphone-smile.png") no-repeat;
+  }
+}
+
+.characteristic__term {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: "Open Sans Bold", Arial, sans-serif;
+  color: $black;
+}
+
+.characteristic__term-description {
+  margin: 0 auto 33px;
+  width: 280px;
+  text-align: center;
+}
+
+@media (min-width: $tablet) {
+  .characteristic {
+    padding-top: 47px;
+  }
+  .characteristic__title {
+    width: 590px;
+    font-size: 40px;
+    line-height: 54px;
+    margin-bottom: 0;
+  }
+  .characteristic__subtitle {
+    width: 335px;
+    font-size: 40px;
+    line-height: 54px;
+    margin-bottom: 83px;
+  }
+
+  .characteristic__wrapper {
+    position: relative;
+    background-color: #f2f2f2;
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      width: 100%;
+      height: 53px;
+      background: linear-gradient(
+        to top left,
+        $skygrey 50%,
+        rgba(255, 0, 0, 0) 52%
+      );
+    }
+  }
+  .characteristic__container {
+    width: 660px;
+    margin: 0 auto;
+  }
+  .characteristic__list {
+    max-width: 700px;
+    min-height: 430px;
+    margin: 0 auto;
+    padding: 1px 0 0 330px;
+    text-align: left;
+    &::before {
+      display: none;
+    }
+    &::after {
+      bottom: 0;
+      left: 20px;
+      width: 268px;
+      height: 480px;
+      transform: translateX(0%);
+      background: url(../img/iphone-smile-tablet.png) no-repeat top left;
+    }
+  }
+  .characteristic__item {
+    margin: 21px 0 37px 0;
+    width: 310px;
+  }
+  .characteristic__term-description {
+    width: auto;
+    text-align: left;
+    margin: 0 0 33px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .characteristic__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0;
+    &::after {
+      display: none;
+    }
+  }
+  .characteristic__item {
+    position: relative;
+    width: 33%;
+    padding-top: 230px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 186px;
+      height: 200px;
+      background: red;
+    }
+    &--first::before {
+      background: green;
+    }
+  }
+}

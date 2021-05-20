@@ -1,0 +1,42 @@
+.article {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .article {
+    display: block;
+    margin-bottom: 50px;
+  }
+  .article__container {
+    width: 660px;
+    margin: 0 auto;
+  }
+  .article__wrapper {
+    position: relative;
+    padding: 97px 0 30px 330px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 55px;
+      left: 20px;
+      width: 238px;
+      height: 276px;
+      background: url("../img/24-houre.png") no-repeat top left;
+    }
+  }
+  .article__title {
+    width: 170px;
+    margin: 0 0 10px 0;
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .article__text {
+    width: 305px;
+    margin: 0 0 10px 0;
+  }
+  .article__link {
+    color: $purpur-red;
+    text-decoration: underline;
+  }
+}

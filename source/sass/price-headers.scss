@@ -1,0 +1,23 @@
+.price-headers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price-headers__item {
+  font-size: 14px;
+  line-height: 30px;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 10px 9px 6px 18px;
+  background-color: $white;
+}
+
+@media (min-width: $tablet) {
+  .price-headers {
+    width: 157px;
+  }
+  .price-headers__item {
+    min-height: 48px;
+    box-sizing: border-box;
+  }
+}
