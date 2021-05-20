@@ -1,0 +1,67 @@
+.page-header {
+  background-color: $lightgrey;
+}
+
+.page-header__wrapper {
+  position: relative;
+  padding-top: 69px;
+}
+
+.logo-header {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+}
+
+.logo__tablet {
+  display: none;
+}
+
+.logo__descktop {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .page-header__wrapper {
+    padding-top: 109px;
+  }
+
+  .logo__mobile {
+    display: none;
+  }
+
+  .logo__tablet {
+    display: block;
+  }
+
+  .logo-header {
+    top: 27px;
+    left: 20px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .page-header {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: -65px;
+    z-index: 1;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .logo__tablet {
+    display: none;
+  }
+
+  .logo__descktop {
+    display: block;
+  }
+
+  .logo-header {
+    left: 129px;
+  }
+}

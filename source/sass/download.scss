@@ -1,0 +1,124 @@
+.download {
+  background-color: $grey;
+  color: $white;
+}
+
+.download__wrapper {
+  min-height: 350px;
+  box-sizing: border-box;
+  position: relative;
+  padding: 24px 0 314px;
+  margin-bottom: 28px;
+  background: url("../img/back-mobile.jpg") no-repeat bottom center;
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 320px;
+    height: 286px;
+    transform: translateX(-50%);
+    background: url("../img/hand-phone.png");
+  }
+}
+
+.download__slogan {
+  width: 230px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+  line-height: 120%;
+  font-family: "Open Sans Light", Arial, sans-serif;
+}
+
+.download__link {
+  display: block;
+  width: 280px;
+  height: 55px;
+  margin: 0 auto 32px;
+  padding: 16px 0 0 0;
+  font-family: "Open Sans Bold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: $white;
+  border: 3px solid $white;
+  border-radius: 29px;
+  box-sizing: border-box;
+  &:hover {
+    background-color: $white;
+    color: $purpur-red;
+  }
+  &:active {
+    color: $purpur-red-transparent;
+  }
+}
+
+@media (min-width: $tablet) {
+  .download {
+    position: relative;
+    min-height: 620px;
+    padding-top: 95px;
+    padding-left: 10px;
+    padding-right: 50%;
+    box-sizing: border-box;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/back-tablet.jpg") no-repeat bottom center;
+      background-size: cover;
+      // z-index: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 660px;
+      height: 545px;
+      transform: translateX(-50%);
+      background: url("../img/hand-phone-tablet.png");
+      // z-index: 2;
+    }
+  }
+  .download__wrapper {
+    padding: 0;
+    min-height: auto;
+    background: none;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .download__slogan {
+    font-size: 40px;
+    position: relative;
+    // z-index: 10;
+  }
+  .download__link {
+    position: relative;
+    width: 300px;
+    margin-bottom: 45px;
+    z-index: 10;
+  }
+  .img-os-block {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media (min-width: $desktop) {
+  .download {
+    &::before {
+      background: url("../img/back-desktop.jpg") no-repeat bottom center;
+      background-size: cover;
+    }
+  }
+}

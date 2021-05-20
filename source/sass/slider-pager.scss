@@ -1,0 +1,40 @@
+.slider-pager {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-pager__item {
+  margin-left: 17px;
+}
+
+.slider-pager__item:first-child {
+  margin: 0;
+}
+
+.slider-pager__link {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $lightgrey;
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.slider-pager__link--active {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $white;
+  border: 3px solid $lightgrey;
+  opacity: 1;
+}

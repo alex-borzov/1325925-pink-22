@@ -1,0 +1,28 @@
+.complex-title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.complex-title__text {
+  display: inline-block;
+  max-width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $purpur-red;
+}
+
+@media (min-width: $tablet) {
+  .complex-title {
+    margin-top: -10px;
+  }
+  .complex-title__text {
+    max-width: 500px;
+    padding: 0 20px 0 20px;
+    background-color: $white;
+  }
+}
