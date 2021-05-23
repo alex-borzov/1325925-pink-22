@@ -1,0 +1,61 @@
+.card {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+// .card__img-wrap {
+// }
+
+.card__img {
+  display: block;
+  width: 100%;
+}
+
+.card__description {
+  position: relative;
+  padding: 16px 10px 54px 18px;
+  background-color: #f2f2f2;
+}
+
+.card__name {
+  font-family: "Open Sans Bold", Arial, sans-serif;
+}
+
+.card__time {
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  margin: 0;
+}
+
+.card__like {
+  position: absolute;
+  bottom: 25px;
+  left: 18px;
+  display: block;
+  width: 13px;
+  height: 12px;
+  background: url(../img/heart.svg) no-repeat center center;
+  background-size: cover;
+}
+
+.card__rate {
+  position: absolute;
+  left: 49px;
+  bottom: 19px;
+  color: #d22856;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: $tablet) {
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

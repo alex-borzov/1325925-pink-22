@@ -1,0 +1,38 @@
+.range {
+  width: 240px;
+  height: 14px;
+}
+
+.range__scale {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 240px;
+  height: 1px;
+  margin-top: -1px;
+  border-top: 2px solid #283644;
+}
+
+.range__handle {
+  position: absolute;
+  width: 14px;
+  top: 0;
+  left: 80%;
+  height: 14px;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid $purpur-red;
+  background-color: $white;
+}
+
+@media (min-width: $tablet) {
+  .range__scale {
+    left: 48px;
+    width: 203px;
+    height: 1px;
+    margin-top: -1px;
+    border-top: 3px solid #283644;
+    top: 7px;
+  }
+}

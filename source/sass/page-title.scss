@@ -1,5 +1,5 @@
 .page-title {
-  padding: 70px 0 70px;
+  padding: 28px 0 77px;
   margin: 0;
   position: relative;
   font-weight: normal;
@@ -31,7 +31,17 @@
 }
 
 @media (min-width: $tablet) {
+  .page-title {
+    padding: 70px 0 130px;
+    &::before {
+      top: -106px;
+      min-height: 660px;
+      background: $black url("../img/back-tablet.jpg") no-repeat top left;
+      background-size: cover;
+    }
+  }
   .page-title__container {
+    width: 400px;
     font-size: 50px;
     line-height: 68px;
   }

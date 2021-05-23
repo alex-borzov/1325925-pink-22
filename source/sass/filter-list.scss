@@ -1,0 +1,97 @@
+.filter-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 240px;
+  list-style: none;
+  position: relative;
+  padding-bottom: 41px;
+  margin: 0 auto 66px;
+}
+
+.filter-list__button {
+  display: block;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.filter-list__button--crop .filter-list__svg {
+  width: 44px;
+  height: 44px;
+}
+
+.filter-list__button--contrast .filter-list__svg {
+  width: 32px;
+  height: 32px;
+}
+
+.filter-list__range-block {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.filter-list__range-block--v {
+  display: block;
+}
+
+.filter-list__svg {
+  width: 100%;
+  fill: rgba(40, 54, 69, 0.3);
+}
+
+.filter-list__button:hover .filter-list__svg {
+  fill: #d22856;
+}
+
+@media (min-width: $tablet) {
+  .filter-list {
+    display: block;
+    margin: 0 0 0 41px;
+  }
+
+  .filter-list__button {
+    display: none;
+  }
+
+  .filter-list__range-block {
+    position: relative;
+    display: block;
+    padding-bottom: 29px;
+    margin-bottom: 29px;
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  .filter-list__range-block--crop::before {
+    left: -4px;
+    top: -2px;
+    background: url("../img/crop.svg") no-repeat top left;
+    background-size: cover;
+  }
+  .filter-list__range-block--fill::before {
+    width: 24px;
+    height: 22px;
+    left: -4px;
+    top: -2px;
+    background: url("../img/fill.svg") no-repeat top left;
+    background-size: cover;
+  }
+  .filter-list__range-block--contrast::before {
+    width: 16px;
+    height: 16px;
+    left: 0px;
+    top: -2px;
+    background: url("../img/contrast.svg") no-repeat top left;
+    background-size: cover;
+  }
+}

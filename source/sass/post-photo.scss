@@ -1,0 +1,67 @@
+.post-photo__text {
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+}
+
+.post-photo__wrap {
+  padding: 20px 20px 40px;
+  background-color: #f2f2f2;
+}
+
+.post-photo__link-img {
+  display: block;
+}
+
+.post-photo__img-container {
+  margin-bottom: 42px;
+}
+
+.post-photo__img {
+  display: block;
+  width: 100%;
+}
+
+.post-photo__btn-sbm {
+  margin-bottom: 12px;
+}
+
+@media (min-width: $tablet) {
+  .post-photo {
+    overflow: hidden;
+  }
+
+  .post-photo__wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 620px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 100%;
+      display: block;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #f2f2f2;
+      z-index: 1;
+    }
+  }
+
+  .post-photo__img-container {
+    position: relative;
+    z-index: 10;
+  }
+
+  .post-photo__filter-container {
+    position: relative;
+    padding-top: 50px;
+    z-index: 10;
+  }
+}

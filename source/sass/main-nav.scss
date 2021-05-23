@@ -78,10 +78,32 @@
 }
 
 @media (min-width: $desktop) {
+  .main-nav {
+    margin-top: 30px;
+  }
+
   .main-nav__toggle {
     display: none;
   }
+
   .main-nav__list {
     display: flex;
+    justify-content: space-between;
+    width: 620px;
+  }
+
+  .main-nav__item {
+    border: none;
+    box-shadow: none;
+    &--current {
+      border-bottom: 2px solid $white;
+    }
+  }
+
+  .main-nav__link {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
   }
 }

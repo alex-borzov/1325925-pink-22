@@ -141,6 +141,29 @@
 }
 
 @media (min-width: $desktop) {
+  .characteristic {
+    padding-top: 61px;
+  }
+
+  .characteristic__title {
+    width: 780px;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  .characteristic__subtitle {
+    width: 420px;
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 154px;
+  }
+
+  .characteristic__wrapper {
+    &::before {
+      height: 100px;
+    }
+  }
+
   .characteristic__list {
     display: flex;
     flex-wrap: wrap;

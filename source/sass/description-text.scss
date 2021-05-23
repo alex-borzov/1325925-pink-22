@@ -1,12 +1,23 @@
 .description-text {
-  padding: 0 20px;
+  padding: 0 20px 50px;
   background-color: $white;
 }
 
 .description-text__text {
-  max-width: 380px;
+  max-width: 250px;
   margin: 0 auto;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
+}
+
+@media (min-width: $tablet) {
+  .description-text {
+    padding-bottom: 78px;
+  }
+
+  .description-text__text {
+    max-width: 450px;
+    font-size: 18px;
+  }
 }

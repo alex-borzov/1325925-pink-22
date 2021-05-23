@@ -1,14 +1,15 @@
 .main-photo {
   position: relative;
+  margin-bottom: 19px;
 }
 
 .main-photo__title {
   position: absolute;
   display: inline-block;
-  top: 20px;
-  right: 30px;
+  top: 0;
+  right: 21px;
   margin: 0;
-  padding: 20px 30px;
+  padding: 6px 19px;
   font-family: "Open Sans Bold", Arial, sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -27,14 +28,23 @@
 .main-photo__description {
   position: relative;
   margin: 0 20px;
-  padding: 20px 20px 50px;
+  padding: 17px 10px 54px 18px;
   background: #f2f2f2;
+}
+
+.main-photo__name {
+  font-family: "Open Sans Bold", Arial, sans-serif;
+}
+
+.main-photo__text {
+  margin: 0;
+  padding: 0;
 }
 
 .main-photo__like {
   position: absolute;
-  bottom: 21px;
-  left: 20px;
+  bottom: 25px;
+  left: 18px;
   display: block;
   width: 13px;
   height: 12px;
@@ -44,7 +54,7 @@
 
 .main-photo__rate {
   position: absolute;
-  bottom: 15px;
+  bottom: 18px;
   left: 50px;
   font-size: 12px;
   padding: 0;
@@ -52,4 +62,13 @@
   line-height: 24px;
   text-transform: uppercase;
   color: $purpur-red;
+}
+
+@media (min-width: $desktop) {
+  .main-photo__description {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
 }
