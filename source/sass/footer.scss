@@ -62,7 +62,7 @@
 .footer__developer-link {
   color: $lightgrey;
   &:hover * .footer__developer-logo-pass {
-    fill: $grey;
+    fill: $lightgrey;
   }
   &:active * .footer__developer-logo-pass {
     opacity: 0.3;

@@ -1,7 +1,5 @@
 .img-os-block {
   width: 300px;
-  margin: 0 auto;
-  padding-bottom: 32px;
 }
 
 .img-os-block__link-block {
@@ -36,5 +34,11 @@
   .img-os-block__text {
     width: 300px;
     font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .img-os-block__link-block {
+    margin-bottom: 46px;
   }
 }
