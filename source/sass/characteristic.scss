@@ -164,10 +164,15 @@
     }
   }
 
+  .characteristic__container {
+    width: 940px;
+    margin: 0 auto;
+  }
+
   .characteristic__list {
     display: flex;
     flex-wrap: wrap;
-    width: 940px;
+    max-width: 940px;
     margin: 0 auto;
     padding: 0;
     &::after {
@@ -176,19 +181,46 @@
   }
   .characteristic__item {
     position: relative;
-    width: 33%;
+    width: 255px;
     padding-top: 230px;
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -117px;
       left: 0;
       width: 186px;
-      height: 200px;
-      background: red;
+      height: 301px;
+      background-size: cover;
     }
     &--first::before {
-      background: green;
+      background: url("../img/phone-grey-desktop.png") no-repeat top left;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/phone-grey-desktop@2x.png");
+      }
     }
+    &--second::before {
+      background: url("../img/phone-pink-desktop.png") no-repeat top left;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/phone-pink-desktop@2x.png");
+      }
+    }
+    &--third::before {
+      background: url("../img/phone-smile-desktop.png") no-repeat top left;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/phone-smile-desktop@2x.png");
+      }
+    }
+  }
+
+  .characteristic__term {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .characteristic__term-description {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
   }
 }

@@ -11,6 +11,9 @@
   margin-bottom: 28px;
   background: url("../img/back-mobile.jpg") no-repeat bottom center;
   background-size: cover;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
   &::after {
     content: "";
     position: absolute;
@@ -20,6 +23,9 @@
     height: 286px;
     transform: translateX(-50%);
     background: url("../img/hand-phone.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hand-phone@2x.png");
+    }
   }
 }
 
@@ -78,6 +84,9 @@
       background: url("../img/back-tablet.jpg") no-repeat bottom center;
       background-size: cover;
       z-index: 1;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-tablet@2x.jpg");
+      }
     }
     &::after {
       content: "";
@@ -89,6 +98,9 @@
       transform: translateX(-50%);
       background: url("../img/hand-phone-tablet.png");
       z-index: 2;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hand-phone-tablet@2x.png");
+      }
     }
   }
   .download__wrapper {
@@ -126,6 +138,9 @@
     &::before {
       background: url("../img/back-desktop.jpg") no-repeat bottom center;
       background-size: cover;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-desktop@2x.jpg");
+      }
     }
     &::after {
       left: 56%;
@@ -133,6 +148,9 @@
       height: 645px;
       background: url("../img/hand-phone-desktop.png") no-repeat bottom;
       background-size: cover;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hand-phone-desktop@2x.png");
+      }
     }
   }
 
