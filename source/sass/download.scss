@@ -9,11 +9,22 @@
   position: relative;
   padding: 24px 0 314px;
   margin-bottom: 28px;
-  background: url("../img/back-mobile.jpg") no-repeat bottom center;
-  background-size: cover;
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/back-mobile@2x.jpg");
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 70px);
+    background: url("../img/back-mobile.jpg") no-repeat bottom center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-mobile@2x.jpg");
+    }
   }
+
   &::after {
     content: "";
     position: absolute;

@@ -1,4 +1,15 @@
 .main-nav {
+  background-color: $lightgrey;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.main-nav--closed {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main-nav__nav {
   color: $white;
 }
 
@@ -6,45 +17,48 @@
   position: absolute;
   top: 23px;
   right: 21px;
-  width: 23px;
-  height: 23px;
   padding: 0;
   border: none;
   background-color: transparent;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: -2px;
-    transform: rotate(45deg);
-    width: 29px;
-    height: 3px;
-    background-color: $white;
+  cursor: pointer;
+  display: none;
+
+  & .main-nav__toggle-svg {
+    fill: $white;
   }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: -2px;
-    transform: rotate(-45deg);
-    width: 29px;
-    height: 3px;
-    background-color: $white;
+
+  &:hover .main-nav__toggle-svg {
+    fill: $purpur-red;
   }
-  &:hover::before,
-  &:hover::after {
-    background-color: $purpur-red;
+  &:active .main-nav__toggle-svg {
+    fill: rgba(210, 40, 86, 0.3);
   }
-  &:active::before,
-  &:active::after {
-    opacity: 0.3;
-  }
+}
+
+.main-nav__toggle-svg--menu {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle-svg--menu {
+  display: block;
+}
+
+.main-nav--closed .main-nav__toggle-svg--cross {
+  display: none;
+}
+
+.main-nav__toggle--v {
+  display: block;
 }
 
 .main-nav__list {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.main-nav--closed .main-nav__list {
+  display: none;
 }
 
 .main-nav__item {
@@ -78,7 +92,7 @@
 }
 
 @media (min-width: $desktop) {
-  .main-nav {
+  .main-nav__nav {
     margin-top: 30px;
   }
 

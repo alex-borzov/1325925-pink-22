@@ -9,7 +9,7 @@
 
 <body class="page-body">
 
-  <header class="page-header">
+  <header class="page-header main-nav">
     <div class="page-header__wrapper">
 
       <a class="logo logo-header" href="index.html">
@@ -82,9 +82,16 @@
         </svg>
 
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav__nav">
         <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <svg class="main-nav__toggle-svg main-nav__toggle-svg--menu" width="50" height="24" viewBox="0 0 50 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="./img/sprite.svg#open-menu-btn"></use>
+          </svg>
+          <svg class="main-nav__toggle-svg main-nav__toggle-svg--cross" width="23" height="23" viewBox="0 0 23 23"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="./img/sprite.svg#close_menu_btn"></use>
+          </svg>
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
@@ -521,7 +528,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

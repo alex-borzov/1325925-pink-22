@@ -48,6 +48,10 @@
   transform: translateX(-54%);
 }
 
+.reviews__arrow-block {
+  display: none;
+}
+
 @media (min-width: $tablet) {
   .reviews {
     margin-bottom: 52px;

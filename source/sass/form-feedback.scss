@@ -1,0 +1,23 @@
+.form-feedback {
+  padding: 37px 0 0 0;
+}
+
+.form-feedback__title {
+  margin-bottom: 10px;
+}
+
+.form-feedback__text {
+  display: block;
+  border: 2px solid #e5e5e5;
+  border-radius: 1px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  margin: 0 auto;
+  padding: 15px 0 35px 20px;
+  width: 80%;
+  resize: none;
+}

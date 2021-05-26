@@ -9,7 +9,7 @@
 
 <body class="page-body">
 
-  <header class="page-header">
+  <header class="page-header main-nav">
     <div class="page-header__wrapper">
 
       <a class="logo logo-header" href="index.html">
@@ -82,9 +82,16 @@
         </svg>
 
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav__nav">
         <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <svg class="main-nav__toggle-svg main-nav__toggle-svg--menu" width="50" height="24" viewBox="0 0 50 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="./img/sprite.svg#open-menu-btn"></use>
+          </svg>
+          <svg class="main-nav__toggle-svg main-nav__toggle-svg--cross" width="23" height="23" viewBox="0 0 23 23"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="./img/sprite.svg#close_menu_btn"></use>
+          </svg>
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
@@ -117,25 +124,24 @@
 
       <form action="https://echo.htmlacademy.ru">
         <div class="competition">
-          <section class="competition__">
-            <ul>
-              <li class="input-text">
-                <label for="" class="input-text__label">
 
-                </label>
-                <input type="text" class="input-text__input">
+          <section class="competition__name-player name-player-block">
+
+            <ul class="name-player-block__list">
+              <li class="name-player-block__item input-data">
+                <label class="name-player-block__label input-data__label" for="surname-input">Фамилия:</label>
+                <input class="name-player-block__input input-data__input surname" id="surname-input" type="text"
+                  name="surname-input" placeholder="Укажите фамилию *" required />
               </li>
-              <li class="input-text">
-                <label for="" class="input-text__label">
-
-                </label>
-                <input type="text" class="input-text__input">
+              <li class="name-player-block__item input-data">
+                <label class="name-player-block__label input-data__label" for="surname-input">Имя:</label>
+                <input class="name-player-block__input input-data__input surname" id="surname-input" type="text"
+                  name="surname-input" placeholder="Введите ваше имя *" required />
               </li>
-              <li class="input-text">
-                <label for="" class="input-text__label">
-
-                </label>
-                <input type="text" class="input-text__input">
+              <li class="name-player-block__item input-data">
+                <label class="name-player-block__label input-data__label" for="surname-input">Отчество:</label>
+                <input class="name-player-block__input input-data__input surname" id="surname-input" type="text"
+                  name="surname-input" placeholder="Ну и отчество тоже" required />
               </li>
             </ul>
           </section>
@@ -180,22 +186,73 @@
             </ul>
           </section>
 
-          <section class="competition__">
+          <section class="competition__address address">
 
+            <h3 class="complex-title address__title">
+              <span class="complex-title__text">
+                Контактная информация
+              </span>
+            </h3>
+
+            <ul class="address__list">
+              <li class="address__item input-data">
+                <label class="address__label input-data__label" for="phone-number-input">Номер телефона</label>
+                <input class="name-form__input input-data__input" id="phone-number-input" type="tel"
+                  name="phone-number-input" placeholder="Номер, пожалуйста" required />
+              </li>
+              <li class="form-name__item input-data">
+                <label class="address__label input-data__label" for="email-input">Адрес почты</label>
+                <input class="address__input input-data__input" id="email-input" type="email" name="email-input"
+                  placeholder="Введите почту *" required />
+              </li>
           </section>
 
-          <section class="competition__">
-
+          <section class="competition__os-block os-block">
+            <h3 class="complex-title os-block__title">
+              <span class="complex-title__text">
+                С каким приложением путешествовали?
+              </span>
+            </h3>
+            <ul class="os-block__list">
+              <li class="os-block__item radio">
+                <input class="radio__input visually-hidden" type="radio" name="choice-os" value="ios" id="filter-ios"
+                  checked />
+                <label class="radio__label os-forme__radio-label" for="filter-ios">Pink для iOS</label>
+              </li>
+              <li class="os-block__item radio">
+                <input class="radio__input visually-hidden" type="radio" name="choice-os" value="android"
+                  id="filter-android" />
+                <label class="radio__label os-forme__radio-label" for="filter-android">Pink на Android</label>
+              </li>
+              <li class="os-block__item radio">
+                <input class="radio__input visually-hidden" type="radio" name="choice-os" value="windows-phone"
+                  id="filter-windows-phone" />
+                <label class="radio__label os-forme__radio-label" for="filter-windows-phone">Windows Phone</label>
+              </li>
+            </ul>
           </section>
 
-          <section class="competition__">
-
+          <section class="competition__form-feedback form-feedback">
+            <h3 class="complex-title form-feedback__title">
+              <span class="complex-title__text">
+                Опишите свои эмоции
+              </span>
+            </h3>
+            <textarea class="form-feedback__text" name="emotions" id="emotions" cols="30" rows="5">Можно прям в красках, не стесняясь в выражениях
+            </textarea>
           </section>
 
-          <section class="competition__">
+
+          <section class="competition__submit-block submit-block">
+
+            <button class="submit-block__button" type="submit">Отправить форму</button>
+
+            <p class="submit-block__text">
+              <span class="submit-block__asterix"> *</span>
+              <span class="submit-block__text-text">&mdash; обязательные поля</span>
+            </p>
 
           </section>
-
         </div>
       </form>
 
@@ -243,15 +300,19 @@
       <div class="footer__developer-block">
         <p class="footer__developer-text">Разработано</p>
         <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <svg class="footer__developer-logo" xmlns="http://www.w3.org/2000/svg" width="27" height="34"
-            viewBox="0 0 60 60">
-            <path class="footer__developer-logo-pass" fill="#D22856"
-              d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+          <svg class="footer__developer-logo" width="27" height="34" viewBox="0 0 27 34" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="footer__developer-logo-pass"
+              d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
+              fill="#D22856" />
           </svg>
+
         </a>
       </div>
     </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 
 </body>
 
