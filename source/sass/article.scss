@@ -22,6 +22,10 @@
       width: 238px;
       height: 276px;
       background: url("../img/24-houre.png") no-repeat top left;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/24-houre@2x.png");
+      }
     }
   }
   .article__title {
@@ -38,5 +42,49 @@
   .article__link {
     color: $purpur-red;
     text-decoration: underline;
+  }
+}
+
+@media (min-width: $desktop) {
+  .article {
+    background-color: $skygrey;
+  }
+
+  .article__container {
+    width: 940px;
+  }
+
+  .article__wrapper {
+    padding: 117px 0 110px 368px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 0;
+      width: 298px;
+      height: 345px;
+      background: url("../img/24-houre-desktop.png") no-repeat top left;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/24-houre-desktop@2x.png");
+      }
+    }
+  }
+
+  .article__title {
+    width: 310px;
+    line-height: 30px;
+    margin-bottom: 27px;
+  }
+
+  .article__text {
+    width: 540px;
+    margin-bottom: 31px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .article__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

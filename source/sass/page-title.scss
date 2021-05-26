@@ -16,6 +16,9 @@
     min-height: 462px;
     z-index: 1;
     background-size: cover;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-mobile@2x.jpg");
+    }
   }
 }
 
@@ -38,8 +41,12 @@
       min-height: 660px;
       background: $black url("../img/back-tablet.jpg") no-repeat top left;
       background-size: cover;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back-tablet@2x.jpg");
+      }
     }
   }
+
   .page-title__container {
     width: 400px;
     font-size: 50px;

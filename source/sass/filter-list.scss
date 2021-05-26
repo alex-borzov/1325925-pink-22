@@ -1,11 +1,9 @@
 .filter-list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 240px;
   list-style: none;
-  position: relative;
-  padding-bottom: 41px;
-  margin: 0 auto 66px;
 }
 
 .filter-list__button {

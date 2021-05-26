@@ -1,6 +1,7 @@
 .post-photo__text {
   width: 280px;
   margin: 0 auto;
+  padding: 20px 0 42px;
   text-align: center;
   line-height: 30px;
 }
@@ -15,12 +16,17 @@
 }
 
 .post-photo__img-container {
-  margin-bottom: 42px;
+  margin-bottom: 41px;
 }
 
 .post-photo__img {
   display: block;
   width: 100%;
+}
+
+.post-photo__filter-list {
+  padding-bottom: 41px;
+  margin: 0 auto 66px;
 }
 
 .post-photo__btn-sbm {
